@@ -18,7 +18,7 @@
         <input type="text" name="word" id="word"  placeholder="what's your word?" onkeyup="updateWord(this)"> 
       </div>
       <div>
-        <input type="button" value="Even or Odd?" onclick="">
+        <input type="button" value="Even or Odd?" onclick="handleSubmit()">
       </div>
     </form>
     <section>
@@ -29,8 +29,7 @@
         <h2>Odd</h2>
         <ul id="odd"></ul>
       </section>
-
-      <script>
+   <script>
         let usersWord = ""
         let oddList = document.getElementById("odd")
         let evenList = document.getElementById("even")
@@ -46,14 +45,14 @@
         newListItem.innerText = usersWord
 
         if(usersWord.length % 2 === 0) {
-
+        
+        evenList.appendChild(newListItem)
         } else {
         oddList.appendChild(newListItem)
         }
         usersWord = ""
         document.getElementById("even-odd-form").reset()
-        }
- 
-      </script>
+        }   
+   </script>
 </body>
 </html>
